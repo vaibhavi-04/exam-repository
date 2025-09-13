@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   // passingYear: { type: String },
   branch: { type: String },
   // currentCourses: { type: [String] },
-  currentCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
+  currentCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course", default: [] }],
   credits: { type: Number, default: 20 }, // Start with 20 credits
 });
 
